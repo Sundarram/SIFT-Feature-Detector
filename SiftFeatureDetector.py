@@ -6,7 +6,7 @@ import argparse as ap
 DEBUG = False
 
 ## 1. Extract SURF keypoints and descriptors from an image. [4] ----------
-def extract_features(image, surfThreshold=1000, algorithm='SURF'):
+def extract_features(image, algorithm, surfThreshold=1000):
 
   # Convert image to grayscale (for SIFT detector).
   image_gs = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
@@ -130,7 +130,7 @@ def merge_images(image1, image2, homography, size, offset, keypoints):
   panorama[oy:h1+oy, ox:ox+w1] = image1  
   # panorama[:h1, :w1] = image1  
 
-  ## TODO: Draw the common feature keypoints.
+  
 
   return panorama
 
