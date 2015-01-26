@@ -5,7 +5,7 @@ import argparse as ap
 
 DEBUG = False
 
-## 1. Extract SURF keypoints and descriptors from an image. [4] ----------
+## 1. Extract SIFT keypoints and descriptors from an image. [4] ----------
 def extract_features(image, algorithm, surfThreshold=1000):
 
   # Convert image to grayscale (for SIFT detector).
